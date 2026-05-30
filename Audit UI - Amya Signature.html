@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audit UI — Amya Signature</title>
+<title>Audit UI - Amya Signature</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -166,6 +166,37 @@ table.prio td:first-child{font-weight:600;}
 .note-mini{font-size:13px; color:var(--faint); font-style:italic; margin-top:10px;}
 hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
 .two{display:grid; grid-template-columns:1fr 1fr; gap:28px;} @media(max-width:780px){.two{grid-template-columns:1fr;}}
+
+/* ---------- RESPONSIVE / MOBILE ---------- */
+@media (max-width: 720px){
+  body{ font-size:15.5px; }
+  .wrap{ padding:0 18px; }
+  section.block{ padding:40px 0; }
+  .cover{ padding:44px 0 32px; }
+  .topbar .inner{ flex-wrap:wrap; gap:10px; padding:11px 18px; }
+  .brandmark{ font-size:17px; }
+  .topnav{ margin-left:0; gap:16px; flex-wrap:nowrap; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%; padding-bottom:3px; }
+  .topnav a{ flex:0 0 auto; }
+  .cover-lede{ font-size:16.5px; }
+  .sec-head{ gap:12px; }
+  .sec-sub{ font-size:16px; margin-bottom:26px; }
+  h3.sub{ margin:34px 0 14px; }
+  .wf{ padding:16px; }
+  .ba{ gap:26px; margin:24px 0; }
+  .swatches{ gap:12px; }
+  .sw{ width:calc(50% - 7px); }
+  .sw .chip-c{ height:64px; }
+  .spec{ padding:20px 18px; }
+  .spec .big{ font-size:34px; }
+  .callout{ grid-template-columns:1fr; gap:6px; padding:22px; }
+  .callout .num{ font-size:42px; }
+  .explain{ font-size:14px; padding:13px 15px; }
+}
+@media (max-width: 420px){
+  .wrap{ padding:0 14px; }
+  .sw{ width:100%; }
+  .sw .chip-c{ height:72px; }
+}
 </style>
 </head>
 <body>
@@ -191,30 +222,30 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
 
 <!-- ============ COVER ============ -->
 <header class="cover wrap">
-  <p class="kicker">Mes notes sur le site — à chaud, sans filtre</p>
-  <h1 class="cover-title">AUDIT UI/UX AmyaSignature</h1>
-  <p class="cover-lede">Quand on prend un de vos flacons en main — le noir mat, l'étiquette blanche, le petit bouchon facetté — on comprend tout de suite : parfumerie de niche, la vraie. Le souci, c'est que le site ne raconte pas encore la même histoire ; il parle un peu trop comme une boutique en ligne « ordinaire ». J'ai donc fait le tour, page par page, et je vous note ce qui me semble à revoir — avec des petites maquettes « avant / après » là où ça compte le plus. On reste sur ce que vous m'avez dit qui comptait : <b>l'image de marque</b> et <b>le ressenti quand on navigue</b>.</p>
+  <p class="kicker">Mes notes sur le site - à chaud, sans filtre</p>
+  <h1 class="cover-title">Vos flacons sont déjà au niveau. Le site, pas encore.</h1>
+  <p class="cover-lede">Quand on prend un de vos flacons en main - le noir mat, l'étiquette blanche, le petit bouchon facetté - on comprend tout de suite : parfumerie de niche, la vraie. Le souci, c'est que le site ne raconte pas encore la même histoire ; il parle un peu trop comme une boutique en ligne « ordinaire ». J'ai donc fait le tour, page par page, et je vous note ce qui me semble à revoir - avec des petites maquettes « avant / après » là où ça compte le plus. On reste sur ce que vous m'avez dit qui comptait : <b>l'image de marque</b> et <b>le ressenti quand on navigue</b>.</p>
 </header>
 
 <!-- ============ SYNTHESE / LEGENDE ============ -->
 <section class="block wrap" id="synthese">
   <div class="sec-head"><h2 class="sec-title">Mon ressenti, en gros</h2></div>
-  <p class="sec-sub">Bon, j'ai passé un bon moment à fouiller le site, alors je vous dis franchement ce que j'en pense. Déjà, rien n'est cassé, tout fonctionne — c'est pas ça le souci. Le souci, c'est qu'il y a plein de petits détails qui, mis bout à bout, font que ça rend pas aussi premium que vos parfums le méritent. Et la bonne nouvelle, c'est que c'est surtout des histoires de couleurs, de polices et de petits mots. Rien d'énorme à recoder.</p>
+  <p class="sec-sub">Bon, j'ai passé un bon moment à fouiller le site, alors je vous dis franchement ce que j'en pense. Déjà, rien n'est cassé, tout fonctionne - c'est pas ça le souci. Le souci, c'est qu'il y a plein de petits détails qui, mis bout à bout, font que ça rend pas aussi premium que vos parfums le méritent. Et la bonne nouvelle, c'est que c'est surtout des histoires de couleurs, de polices et de petits mots. Rien d'énorme à recoder.</p>
 
   <div class="two">
     <div>
       <h3 class="sub">Ce qui m'embête, en vrai</h3>
-      <p style="color:var(--anthracite); font-size:16px; margin-top:0;">Pour moi le vrai problème, c'est l'écart entre ce que vaut le produit et ce que le site donne à voir. Vous avez un extrait à 32 %, une histoire de famille, des racines au Québec… et pourtant, quand j'arrive sur la page, je tombe d'abord sur des boutons violets, un bandeau qui défile dans tous les sens, des photos qui font un peu « générées par ordi » et des pop-ups « quelqu'un vient d'acheter à Berlin » qui sentent le faux à plein nez. Du coup, mis ensemble, tout ça casse l'effet luxe. Et franchement ça m'embête, parce que la matière est là — faut juste arrêter de la cacher derrière des trucs qui font cheap.</p>
+      <p style="color:var(--anthracite); font-size:16px; margin-top:0;">Pour moi le vrai problème, c'est l'écart entre ce que vaut le produit et ce que le site donne à voir. Vous avez un extrait à 32 %, une histoire de famille, des racines au Québec… et pourtant, quand j'arrive sur la page, je tombe d'abord sur des boutons violets, un bandeau qui défile dans tous les sens, des photos qui font un peu « générées par ordi » et des pop-ups « quelqu'un vient d'acheter à Berlin » qui sentent le faux à plein nez. Du coup, mis ensemble, tout ça casse l'effet luxe. Et franchement ça m'embête, parce que la matière est là - faut juste arrêter de la cacher derrière des trucs qui font cheap.</p>
     </div>
     <div>
       <h3 class="sub">Comment lire les maquettes</h3>
       <div class="points" style="gap:9px;">
-        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-bad" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>AVANT</b> — l'état actuel et sa friction.</p></div>
-        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-good" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>APRÈS</b> — la proposition recommandée.</p></div>
-        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-alt" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>VARIANTE</b> — direction alternative à comparer.</p></div>
+        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-bad" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>AVANT</b> - l'état actuel et sa friction.</p></div>
+        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-good" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>APRÈS</b> - la proposition recommandée.</p></div>
+        <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span class="ba-label lab-alt" style="margin:0;"><span class="dot"></span></span><p style="color:var(--ink);"><b>VARIANTE</b> - direction alternative à comparer.</p></div>
         <div class="point" style="grid-template-columns:auto 1fr; padding:12px 16px;"><span style="font-family:'Space Mono',monospace; font-size:13px; color:var(--ink); font-weight:700;">¶</span><p style="color:var(--ink);">Sous chaque maquette, une <b>explication</b> « le problème / la solution ».</p></div>
       </div>
-      <p class="note-mini">Les maquettes sont volontairement « brouillon » : on regarde la <b>structure</b> et l'<b>ordre des choses</b>, pas le rendu final. La couleur est juste là pour montrer la direction — noir, blanc, une touche d'or.</p>
+      <p class="note-mini">Les maquettes sont volontairement « brouillon » : on regarde la <b>structure</b> et l'<b>ordre des choses</b>, pas le rendu final. La couleur est juste là pour montrer la direction - noir, blanc, une touche d'or.</p>
     </div>
   </div>
 </section>
@@ -225,13 +256,13 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
   <p class="sec-sub">Vous visez le luxe, mais les codes actuels (le violet, les emojis, la typo Shopify par défaut) disent autre chose. Trois leviers faciles pour recoller les deux : la palette, les boutons, la typo.</p>
 
   <h3 class="sub">La palette</h3>
-  <p style="color:var(--anthracite); margin-top:0; max-width:66ch;">Le violet des boutons n'a rien à voir avec le noir-argent de vos flacons — il jure. Je le remplacerais par une palette courte et tenue : un noir profond, un blanc un peu chaud, un gris anthracite, et une seule touche d'or pour les détails. Rien de plus. C'est cette retenue, partout pareil, qui fait « maison de parfum ».</p>
+  <p style="color:var(--anthracite); margin-top:0; max-width:66ch;">Le violet des boutons n'a rien à voir avec le noir-argent de vos flacons - il jure. Je le remplacerais par une palette courte et tenue : un noir profond, un blanc un peu chaud, un gris anthracite, et une seule touche d'or pour les détails. Rien de plus. C'est cette retenue, partout pareil, qui fait « maison de parfum ».</p>
   <div class="swatches">
-    <div class="sw strike"><div class="chip-c" style="background:var(--violet);"></div><div class="nm">Violet / prune <span class="tagline t-bad">à retirer</span></div><div class="hex">#6E2A55</div><div class="use">Couleur actuelle des CTA — hors-univers.</div></div>
+    <div class="sw strike"><div class="chip-c" style="background:var(--violet);"></div><div class="nm">Violet / prune <span class="tagline t-bad">à retirer</span></div><div class="hex">#6E2A55</div><div class="use">Couleur actuelle des CTA - hors-univers.</div></div>
     <div class="sw"><div class="chip-c" style="background:#0A0A0A;"></div><div class="nm">Noir profond</div><div class="hex">#0A0A0A</div><div class="use">Boutons pleins, typo, fonds dramatiques.</div></div>
     <div class="sw"><div class="chip-c" style="background:#F5F5F0; border-color:#1311101F;"></div><div class="nm">Blanc cassé</div><div class="hex">#F5F5F0</div><div class="use">Fond général chaud (pas de blanc pur).</div></div>
     <div class="sw"><div class="chip-c" style="background:#2C2C2C;"></div><div class="nm">Anthracite</div><div class="hex">#2C2C2C</div><div class="use">Texte secondaire, surfaces.</div></div>
-    <div class="sw"><div class="chip-c" style="background:#9A7B3F;"></div><div class="nm">Or — accent</div><div class="hex">#9A7B3F</div><div class="use">Une seule touche : liens, détails, filets.</div></div>
+    <div class="sw"><div class="chip-c" style="background:#9A7B3F;"></div><div class="nm">Or - accent</div><div class="hex">#9A7B3F</div><div class="use">Une seule touche : liens, détails, filets.</div></div>
   </div>
 
   <h3 class="sub">Les boutons</h3>
@@ -239,7 +270,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
     <div class="ba-col">
       <div class="ba-label lab-bad"><span class="dot"></span>Avant</div>
       <div class="wf" style="display:flex; align-items:center; justify-content:center; min-height:130px;"><span class="fbtn old">Explore →</span></div>
-      <div class="annot">pilule violette, arrondie, « e-shop » — casse le luxe</div>
+      <div class="annot">pilule violette, arrondie, « e-shop » - casse le luxe</div>
     </div>
     <div class="ba-col">
       <div class="ba-label lab-good"><span class="dot"></span>Après · plein</div>
@@ -248,7 +279,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
     </div>
     <div class="ba-col">
       <div class="ba-label lab-alt"><span class="dot"></span>Après · contour</div>
-      <div class="wf" style="display:flex; align-items:center; justify-content:center; min-height:130px;"><span class="fbtn gold">Découvrir &nbsp;—</span></div>
+      <div class="wf" style="display:flex; align-items:center; justify-content:center; min-height:130px;"><span class="fbtn gold">Découvrir &nbsp;-</span></div>
       <div class="annot good">contour fin or sur fond transparent, pour les zones secondaires</div>
     </div>
   </div>
@@ -257,15 +288,15 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
   <div class="two">
     <div class="spec">
       <div class="big">Aventure</div>
-      <div class="lbl">Titres — Cormorant Garamond (serif)</div>
+      <div class="lbl">Titres - Cormorant Garamond (serif)</div>
       <div class="big" style="font-size:22px; font-family:'Hanken Grotesk'; font-weight:400; margin-top:18px; letter-spacing:-.01em;">Extrait de parfum · 32 % de concentration</div>
-      <div class="lbl">Corps — sans-serif fin & lisible</div>
-      <p class="body">Un beau serif sur les titres, ça pose tout de suite le ton « parfumerie ». Un sans-serif simple pour le reste, et tout reste lisible. Deux polices suffisent — on laisse tomber la typo Shopify par défaut, qui fait passe-partout.</p>
+      <div class="lbl">Corps - sans-serif fin & lisible</div>
+      <p class="body">Un beau serif sur les titres, ça pose tout de suite le ton « parfumerie ». Un sans-serif simple pour le reste, et tout reste lisible. Deux polices suffisent - on laisse tomber la typo Shopify par défaut, qui fait passe-partout.</p>
     </div>
     <div>
       <div class="points">
         <div class="point"><span class="n">a</span><div><h4>Du chic, pas du tout-en-gras</h4><p>Aujourd'hui les titres genre « Here Are Our Top Sellers… » sont en gros gras tout en majuscules : ça fait promo. Le même titre en serif, en minuscules, plus grand et plus aéré, ça fait tout de suite plus chic.</p></div></div>
-        <div class="point"><span class="n">b</span><div><h4>Les majuscules, juste pour les petits labels</h4><p>On les garde, bien espacées, pour les tout petits sur-titres (« DÉCOUVRIR », « TOP PRODUITS »). Jamais sur une phrase entière — sinon ça crie.</p></div></div>
+        <div class="point"><span class="n">b</span><div><h4>Les majuscules, juste pour les petits labels</h4><p>On les garde, bien espacées, pour les tout petits sur-titres (« DÉCOUVRIR », « TOP PRODUITS »). Jamais sur une phrase entière - sinon ça crie.</p></div></div>
         <div class="point"><span class="n">c</span><div><h4>Un blanc un peu chaud, pas un blanc clinique</h4><p>Passer le fond du site d'un blanc pur à un blanc légèrement chaud (#F5F5F0) : ça adoucit l'ensemble et ça met le noir des flacons en valeur.</p></div></div>
       </div>
     </div>
@@ -279,7 +310,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
 
   <div class="ba">
     <div class="ba-col">
-      <div class="ba-label lab-bad"><span class="dot"></span>Avant — 5 messages en boucle + emojis</div>
+      <div class="ba-label lab-bad"><span class="dot"></span>Avant - 5 messages en boucle + emojis</div>
       <div class="wf" style="background:#F1EEE6;">
         <span class="tag">TOP BAR</span>
         <div class="row" style="justify-content:space-between; overflow:hidden; font-family:'Space Mono',monospace; font-size:9px; color:#8A8678; gap:18px;">
@@ -289,12 +320,12 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
       <div class="explain bad"><strong>Le problème</strong>Cinq messages qui défilent en boucle, dont un avec un emoji : le client n'en retient aucun, et le ton fait « site discount » plutôt que parfumerie de niche.</div>
     </div>
     <div class="ba-col">
-      <div class="ba-label lab-good"><span class="dot"></span>Après — un message, sobre</div>
+      <div class="ba-label lab-good"><span class="dot"></span>Après - un message, sobre</div>
       <div class="wf dark" style="display:flex; align-items:center; justify-content:center; min-height:70px;">
         <span class="tag">TOP BAR</span>
         <span style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.16em; color:var(--gold-soft);">LIVRAISON OFFERTE AU CANADA DÈS 100 $CAD &nbsp;·&nbsp; EXTRAITS À 32 % DE CONCENTRATION</span>
       </div>
-      <div class="explain good"><strong>La solution</strong>Un seul argument fort, sur fond noir, sans emoji — qu'on change selon la saison ou le lancement. C'est plus calme, et ça inspire confiance dès le premier coup d'œil.</div>
+      <div class="explain good"><strong>La solution</strong>Un seul argument fort, sur fond noir, sans emoji - qu'on change selon la saison ou le lancement. C'est plus calme, et ça inspire confiance dès le premier coup d'œil.</div>
     </div>
   </div>
 
@@ -321,12 +352,12 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
         <div class="row gap8"><div class="ph" style="width:30px;height:30px;border-radius:50%;">♡</div><div class="ph" style="width:30px;height:30px;border-radius:50%;">⌕</div><div class="ph" style="width:30px;height:30px;border-radius:50%;">⌂</div></div>
       </div>
     </div>
-    <div class="explain bad"><strong>Le problème</strong>Le menu ne parle que de « boutique » : nulle part on ne devine qu'il existe du sur-mesure, des événements ou un lieu physique à Gatineau. Et il n'y a aucun choix de langue, alors que vous êtes une marque québécoise — ça met de côté une partie de votre public francophone.</div>
+    <div class="explain bad"><strong>Le problème</strong>Le menu ne parle que de « boutique » : nulle part on ne devine qu'il existe du sur-mesure, des événements ou un lieu physique à Gatineau. Et il n'y a aucun choix de langue, alors que vous êtes une marque québécoise - ça met de côté une partie de votre public francophone.</div>
   </div>
 
   <div class="ba" style="margin-top:28px;">
     <div class="ba-col">
-      <div class="ba-label lab-good"><span class="dot"></span>Piste 1 — logo centré</div>
+      <div class="ba-label lab-good"><span class="dot"></span>Piste 1 - logo centré</div>
       <div class="wf">
         <span class="tag">MENU · PISTE 1</span>
         <div class="row" style="justify-content:space-between; align-items:center;">
@@ -341,7 +372,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
       <div class="explain good"><strong>Piste 1 · posture « maison »</strong>Logo bien centré, une barre FR/EN tout en haut, et des onglets qui montrent enfin tout ce que vous faites. Rien que ça, ça vous fait passer de « boutique en ligne » à « maison de parfum ».</div>
     </div>
     <div class="ba-col">
-      <div class="ba-label lab-alt"><span class="dot"></span>Piste 2 — plus compact</div>
+      <div class="ba-label lab-alt"><span class="dot"></span>Piste 2 - plus compact</div>
       <div class="wf">
         <span class="tag">MENU · PISTE 2</span>
         <div class="row" style="justify-content:space-between; align-items:center;">
@@ -362,7 +393,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
 <!-- ============ 4. HERO ============ -->
 <section class="block wrap" id="hero">
   <div class="sec-head"><h2 class="sec-title">Hero de la page d'accueil</h2></div>
-  <p class="sec-sub">En haut de l'accueil, ça se bouscule — et en plus, le hero change tout seul entre plusieurs versions. Pour un site e-commerce, c'est beaucoup trop de mouvement : le client n'a pas le temps de lire et ça donne une impression d'instabilité. Mon avis : on garde UN seul hero, fixe, qui ne bouge pas. Voici trois pistes possibles (à choisir, pas à faire défiler), plus posées, où on laisse respirer le flacon et où on ne dit qu'une chose à la fois.</p>
+  <p class="sec-sub">En haut de l'accueil, ça se bouscule - et en plus, le hero change tout seul entre plusieurs versions. Pour un site e-commerce, c'est beaucoup trop de mouvement : le client n'a pas le temps de lire et ça donne une impression d'instabilité. Mon avis : on garde UN seul hero, fixe, qui ne bouge pas. Voici trois pistes possibles (à choisir, pas à faire défiler), plus posées, où on laisse respirer le flacon et où on ne dit qu'une chose à la fois.</p>
 
   <div class="ba-col">
     <div class="ba-label lab-bad"><span class="dot"></span>Avant</div>
@@ -377,12 +408,12 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
         <div class="ph" style="flex:1; min-height:160px;">main + flacon<br>(perçu IA)</div>
       </div>
     </div>
-    <div class="explain bad"><strong>Le problème</strong>D'abord, le hero change tout seul entre plusieurs variantes — pour de l'e-commerce, c'est trop de mouvement : ça fatigue et ça déstabilise. Ensuite, sur chaque version, trois zones se disputent l'attention en même temps (le collage, le texte, la main), donc l'œil ne sait pas où se poser. Et les visuels « lifestyle » ont l'air générés par IA, ce qui décrédibilise une marque qui se veut artisanale et humaine.</div>
+    <div class="explain bad"><strong>Le problème</strong>D'abord, le hero change tout seul entre plusieurs variantes - pour de l'e-commerce, c'est trop de mouvement : ça fatigue et ça déstabilise. Ensuite, sur chaque version, trois zones se disputent l'attention en même temps (le collage, le texte, la main), donc l'œil ne sait pas où se poser. Et les visuels « lifestyle » ont l'air générés par IA, ce qui décrédibilise une marque qui se veut artisanale et humaine.</div>
   </div>
 
   <div class="ba tri" style="margin-top:24px;">
     <div class="ba-col">
-      <div class="ba-label lab-good"><span class="dot"></span>Dir. 1 — plein cadre, sobre</div>
+      <div class="ba-label lab-good"><span class="dot"></span>Dir. 1 - plein cadre, sobre</div>
       <div class="wf dark" style="min-height:240px; padding:0; overflow:hidden;">
         <span class="tag">HERO · DIR. 1</span>
         <div class="ph" style="height:240px; border:none; border-radius:0; color:#7C7560;">photo flacon<br>plein cadre · marbre<br>lumière naturelle</div>
@@ -391,10 +422,10 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
           <span class="fbtn on-dark" style="margin-top:10px;">Découvrir</span>
         </div>
       </div>
-      <div class="explain good"><strong>Direction 1 · sobre</strong>Une seule grande photo de flacon en plein cadre, un titre court, un bouton discret en contour. C'est l'image qui fait tout le travail — calme et clairement premium.</div>
+      <div class="explain good"><strong>Direction 1 · sobre</strong>Une seule grande photo de flacon en plein cadre, un titre court, un bouton discret en contour. C'est l'image qui fait tout le travail - calme et clairement premium.</div>
     </div>
     <div class="ba-col">
-      <div class="ba-label lab-alt"><span class="dot"></span>Dir. 2 — éditorial, split</div>
+      <div class="ba-label lab-alt"><span class="dot"></span>Dir. 2 - éditorial, split</div>
       <div class="wf" style="min-height:240px;">
         <span class="tag">HERO · DIR. 2</span>
         <div class="row" style="gap:16px; align-items:center; height:100%;">
@@ -410,7 +441,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
       <div class="explain good"><strong>Direction 2 · éditorial</strong>Un grand titre serif à gauche, le flacon à droite, et deux boutons (« la collection » et « sur-mesure »). Une mise en page façon magazine, qui raconte plus.</div>
     </div>
     <div class="ba-col">
-      <div class="ba-label lab-alt"><span class="dot"></span>Dir. 3 — argument produit</div>
+      <div class="ba-label lab-alt"><span class="dot"></span>Dir. 3 - argument produit</div>
       <div class="wf" style="min-height:240px;">
         <span class="tag">HERO · DIR. 3</span>
         <div class="ph" style="height:130px;">photo matières premières<br>(safran · ambre · oud)</div>
@@ -423,7 +454,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
       <div class="explain good"><strong>Direction 3 · l'argument</strong>On met vos chiffres en avant dès le départ (32 % d'extrait, 18 h de tenue). Parfait si vous voulez convaincre par la qualité plutôt que par l'ambiance.</div>
     </div>
   </div>
-  <p class="note-mini"><b>Le plus important :</b> ces trois pistes sont des options à <b>choisir</b> — on en garde <b>une seule</b>, fixe. Pas de hero qui tourne ou qui change tout seul : sur un site e-commerce, le mouvement permanent fatigue l'œil et fait beaucoup moins sérieux.</p>
+  <p class="note-mini"><b>Le plus important :</b> ces trois pistes sont des options à <b>choisir</b> - on en garde <b>une seule</b>, fixe. Pas de hero qui tourne ou qui change tout seul : sur un site e-commerce, le mouvement permanent fatigue l'œil et fait beaucoup moins sérieux.</p>
 </section>
 
 <!-- ============ 5. SECTIONS ACCUEIL ============ -->
@@ -451,9 +482,9 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
       <div class="wf">
         <span class="tag">HOME · AVIS</span>
         <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; line-height:1.3; color:var(--ink);">« Un sillage qui tient toute la journée. On me demande sans cesse ce que je porte. »</div>
-        <div class="row gap8 mt12"><span class="stars">★★★★★</span><span style="font-family:'Space Mono',monospace; font-size:9px; color:var(--muted);">SOPHIE — AVENTURE · MONTRÉAL</span></div>
+        <div class="row gap8 mt12"><span class="stars">★★★★★</span><span style="font-family:'Space Mono',monospace; font-size:9px; color:var(--muted);">SOPHIE - AVENTURE · MONTRÉAL</span></div>
       </div>
-      <div class="explain good"><strong>L'idée</strong>À la place des pop-ups « quelqu'un vient d'acheter à Berlin », un vrai avis client mis en valeur — prénom, parfum, ville. C'est crédible, et ça donne envie.</div>
+      <div class="explain good"><strong>L'idée</strong>À la place des pop-ups « quelqu'un vient d'acheter à Berlin », un vrai avis client mis en valeur - prénom, parfum, ville. C'est crédible, et ça donne envie.</div>
     </div>
     <div>
       <h3 class="sub">La boutique de Gatineau</h3>
@@ -469,10 +500,10 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
           </div>
         </div>
       </div>
-      <div class="explain good"><strong>L'idée</strong>Une boutique physique, c'est un énorme gage de sérieux : une photo de l'espace, l'adresse de Gatineau, un lien « itinéraire ». Beaucoup de marques en ligne n'ont pas ça — alors montrez-le.</div>
+      <div class="explain good"><strong>L'idée</strong>Une boutique physique, c'est un énorme gage de sérieux : une photo de l'espace, l'adresse de Gatineau, un lien « itinéraire ». Beaucoup de marques en ligne n'ont pas ça - alors montrez-le.</div>
     </div>
   </div>
-  <p class="note-mini">Les sections qui marchent déjà (Top Sellers, Your Signature Scent), on les garde — on les repasse juste dans la nouvelle palette et la nouvelle typo.</p>
+  <p class="note-mini">Les sections qui marchent déjà (Top Sellers, Your Signature Scent), on les garde - on les repasse juste dans la nouvelle palette et la nouvelle typo.</p>
 </section>
 
 <!-- ============ 6. PAGE PRODUITS ============ -->
@@ -512,7 +543,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
     </div>
   </div>
 
-  <h3 class="sub">Carte produit — avant / après</h3>
+  <h3 class="sub">Carte produit - avant / après</h3>
   <div class="ba">
     <div class="ba-col">
       <div class="ba-label lab-bad"><span class="dot"></span>Avant</div>
@@ -526,7 +557,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
           <div class="sk lite w40" style="height:8px;"></div>
         </div>
       </div>
-      <div class="explain bad"><strong>Le problème</strong>La mention « Inspired by [grande marque] · C$430 » est la première chose qu'on lit — et elle contredit frontalement votre promesse « No Clones, No Dupes ».</div>
+      <div class="explain bad"><strong>Le problème</strong>La mention « Inspired by [grande marque] · C$430 » est la première chose qu'on lit - et elle contredit frontalement votre promesse « No Clones, No Dupes ».</div>
     </div>
     <div class="ba-col">
       <div class="ba-label lab-good"><span class="dot"></span>Après</div>
@@ -546,18 +577,18 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
   <div class="points mt16">
     <div class="point"><span class="n">→</span><div><h4>Décrire l'ambiance plutôt que nommer la grande marque</h4><p>Vous écrivez « No Clones, No Dupes »… mais chaque produit s'affiche « Inspired by [grande marque] ». C'est contradictoire. Plutôt que de nommer le parfum, décrivez l'ambiance : « <i>dans l'esprit des grands ambrés floraux</i> ». Si vous voulez rester transparent, mettez l'info plus bas dans la fiche, jamais en premier.</p></div></div>
     <div class="point"><span class="n">→</span><div><h4>La pyramide olfactive sur la fiche</h4><p>Montrez la pyramide tête / cœur / fond, avec un petit badge « famille olfactive ». Ça aide le client à se situer, et franchement ça rend la description bien plus agréable à lire.</p></div></div>
-    <div class="point"><span class="n">→</span><div><h4>Enlever le bouton « Compare » qui flotte</h4><p>Honnêtement, sur une collection de cette taille, presque personne ne s'en sert. Il alourdit l'écran pour rien — je l'enlèverais.</p></div></div>
+    <div class="point"><span class="n">→</span><div><h4>Enlever le bouton « Compare » qui flotte</h4><p>Honnêtement, sur une collection de cette taille, presque personne ne s'en sert. Il alourdit l'écran pour rien - je l'enlèverais.</p></div></div>
   </div>
 </section>
 
 <!-- ============ FICHE PRODUIT ============ -->
 <section class="block wrap" id="fiche">
   <div class="sec-head"><h2 class="sec-title">La fiche produit</h2></div>
-  <p class="sec-sub">J'ai regardé la page de Mystère Rouge. Le contenu est là — la description est même jolie — mais la colonne d'achat à droite est pleine de petits trucs « gros e-commerce » qui font baisser le standing : faux compteur de visiteurs, deux boutons violets, gros badges « Norton Secured »… Pour une marque de niche, ça produit exactement l'effet inverse de celui qu'on cherche.</p>
+  <p class="sec-sub">J'ai regardé la page de Mystère Rouge. Le contenu est là - la description est même jolie - mais la colonne d'achat à droite est pleine de petits trucs « gros e-commerce » qui font baisser le standing : faux compteur de visiteurs, deux boutons violets, gros badges « Norton Secured »… Pour une marque de niche, ça produit exactement l'effet inverse de celui qu'on cherche.</p>
 
   <div class="ba">
     <div class="ba-col">
-      <div class="ba-label lab-bad"><span class="dot"></span>Avant — la colonne d'achat</div>
+      <div class="ba-label lab-bad"><span class="dot"></span>Avant - la colonne d'achat</div>
       <div class="wf">
         <span class="tag">COLONNE D'ACHAT · AVANT</span>
         <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Mystère Rouge</div>
@@ -569,7 +600,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
         <div style="font-family:'Space Mono',monospace; font-size:10px; color:#C0622A; margin-top:12px;">🔥 22 customers are viewing this product</div>
         <div class="ph mt12" style="height:60px;">badges « Norton Secured · 100% · Visa · PayPal »</div>
       </div>
-      <div class="explain bad"><strong>Le problème</strong>Trois choses clochent. <b>(1)</b> « Inspired by Baccarat Rouge 540 · C$430 » est la première ligne sous le nom — ça vous compare direct à plus gros que vous. <b>(2)</b> Deux boutons violets côte à côte (« Add to cart » + « Buy with Shop ») : on ne sait plus lequel cliquer. <b>(3)</b> Le « 🔥 22 customers are viewing » et les gros badges « Norton Secured », ça met la pression et ça fait dropshipping, pas parfumerie.</div>
+      <div class="explain bad"><strong>Le problème</strong>Trois choses clochent. <b>(1)</b> « Inspired by Baccarat Rouge 540 · C$430 » est la première ligne sous le nom - ça vous compare direct à plus gros que vous. <b>(2)</b> Deux boutons violets côte à côte (« Add to cart » + « Buy with Shop ») : on ne sait plus lequel cliquer. <b>(3)</b> Le « 🔥 22 customers are viewing » et les gros badges « Norton Secured », ça met la pression et ça fait dropshipping, pas parfumerie.</div>
     </div>
     <div class="ba-col">
       <div class="ba-label lab-good"><span class="dot"></span>Après</div>
@@ -589,7 +620,7 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
   </div>
 
   <h3 class="sub">Les notes : en faire une vraie pyramide</h3>
-  <p style="color:var(--anthracite); margin-top:0; max-width:66ch;">Vos notes sont déjà là (tête : safran, ambre ; cœur : caramel, jasmin ; fond : ambre, mousse de chêne)… mais en petit texte gris perdu dans la description. En parfum, c'est justement le détail qu'on adore — autant le montrer joliment.</p>
+  <p style="color:var(--anthracite); margin-top:0; max-width:66ch;">Vos notes sont déjà là (tête : safran, ambre ; cœur : caramel, jasmin ; fond : ambre, mousse de chêne)… mais en petit texte gris perdu dans la description. En parfum, c'est justement le détail qu'on adore - autant le montrer joliment.</p>
   <div class="wf mt8">
     <span class="tag">FICHE · PYRAMIDE OLFACTIVE</span>
     <div class="row" style="justify-content:space-between; align-items:center;">
@@ -605,10 +636,10 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
   <div class="explain good"><strong>L'idée</strong>Un petit badge « famille olfactive » en haut, puis les trois étages tête / cœur / fond avec les notes en pastilles. Le client comprend tout de suite le caractère du parfum, et ça rend la fiche bien plus belle à lire.</div>
 
   <div class="points mt16">
-    <div class="point"><span class="n">→</span><div><h4>Enlever la fausse urgence</h4><p>Le « 🔥 22 customers are viewing this product », c'est faux et ça se voit. Sur du luxe, ça fait fuir plus qu'autre chose — à supprimer, comme les pop-ups « acheté à Berlin ».</p></div></div>
+    <div class="point"><span class="n">→</span><div><h4>Enlever la fausse urgence</h4><p>Le « 🔥 22 customers are viewing this product », c'est faux et ça se voit. Sur du luxe, ça fait fuir plus qu'autre chose - à supprimer, comme les pop-ups « acheté à Berlin ».</p></div></div>
     <div class="point"><span class="n">→</span><div><h4>Arrêter de vous vendre comme « moins cher »</h4><p>Dans la description, la ligne « Fraction of the Cost of Designer Fragrances » vous positionne comme une version pas chère d'autre chose. Pour une marque de niche, je l'enlèverais : parlez qualité et concentration, pas prix cassé.</p></div></div>
-    <div class="point"><span class="n">→</span><div><h4>Garder les avis, mais les soigner</h4><p>Vos avis sont un vrai trésor — en français ET en anglais, avec vos réponses, ça montre une marque vivante. Juste : enlever les emojis dans les réponses officielles (❤️🔥) et présenter le tout plus proprement.</p></div></div>
-    <div class="point"><span class="n">→</span><div><h4>Alléger le bas de page</h4><p>Trois carrousels qui se suivent (« Related products », « You may also like », « Recently viewed »), ça fait doublon. J'en garderais un seul (« Vous aimerez aussi »). Et la grosse FAQ livraison n'a pas besoin d'être sur chaque fiche — sa place est dans le footer ou une page dédiée.</p></div></div>
+    <div class="point"><span class="n">→</span><div><h4>Garder les avis, mais les soigner</h4><p>Vos avis sont un vrai trésor - en français ET en anglais, avec vos réponses, ça montre une marque vivante. Juste : enlever les emojis dans les réponses officielles (❤️🔥) et présenter le tout plus proprement.</p></div></div>
+    <div class="point"><span class="n">→</span><div><h4>Alléger le bas de page</h4><p>Trois carrousels qui se suivent (« Related products », « You may also like », « Recently viewed »), ça fait doublon. J'en garderais un seul (« Vous aimerez aussi »). Et la grosse FAQ livraison n'a pas besoin d'être sur chaque fiche - sa place est dans le footer ou une page dédiée.</p></div></div>
     <div class="point"><span class="n">→</span><div><h4>La bande lifestyle au milieu</h4><p>L'image (femme en doudoune) fait un peu stock/IA et coupe la lecture en plein milieu. Soit une vraie photo en lien avec le parfum, soit on l'enlève.</p></div></div>
   </div>
 </section>
@@ -623,14 +654,14 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
     <div>
       <p style="font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.18em; color:var(--gold-soft); margin-bottom:8px;">NEWSLETTER · AVANT → APRÈS</p>
       <p style="text-decoration:line-through; opacity:.55; margin-bottom:6px;">« We Want To Stay In Touch! »</p>
-      <p class="quote-fr">« Rejoignez l'univers Amya Signature — nouveautés, invitations exclusives et conseils olfactifs, directement dans votre boîte mail. »</p>
+      <p class="quote-fr">« Rejoignez l'univers Amya Signature - nouveautés, invitations exclusives et conseils olfactifs, directement dans votre boîte mail. »</p>
     </div>
   </div>
 
   <div class="points">
-    <div class="point"><span class="n">a</span><div><h4>Supprimer ou localiser les pop-ups de preuve sociale <span class="tagline t-bad">friction</span></h4><p class="problem"><b>Aujourd'hui —</b> le « Someone recently bought in Berlin, Germany » qui surgit, ça sent le faux à plein nez.</p><p class="fix"><b>Mieux —</b> soit on les enlève, soit on n'affiche que du vrai et du local (« Une commande vient de partir de Montréal »). Encore mieux : une vraie section « Ils nous font confiance », avec de vrais clients.</p></div></div>
-    <div class="point"><span class="n">b</span><div><h4>Newsletter orientée valeur <span class="tagline t-good">copy</span></h4><p class="problem"><b>Aujourd'hui —</b> « We Want To Stay In Touch! » : un peu mièvre pour une marque comme la vôtre.</p><p class="fix"><b>Mieux —</b> dites ce que les gens y gagnent vraiment (voir l'encadré au-dessus), et en français.</p></div></div>
-    <div class="point"><span class="n">c</span><div><h4>Avis clients mis en scène <span class="tagline t-good">confiance</span></h4><p>Vous avez déjà de bons avis (en français et en anglais) — ils méritent mieux que trois petites étoiles perdues sous les cartes. Une vraie section, avec une citation choisie, le prénom et le parfum porté.</p></div></div>
+    <div class="point"><span class="n">a</span><div><h4>Supprimer ou localiser les pop-ups de preuve sociale <span class="tagline t-bad">friction</span></h4><p class="problem"><b>Aujourd'hui -</b> le « Someone recently bought in Berlin, Germany » qui surgit, ça sent le faux à plein nez.</p><p class="fix"><b>Mieux -</b> soit on les enlève, soit on n'affiche que du vrai et du local (« Une commande vient de partir de Montréal »). Encore mieux : une vraie section « Ils nous font confiance », avec de vrais clients.</p></div></div>
+    <div class="point"><span class="n">b</span><div><h4>Newsletter orientée valeur <span class="tagline t-good">copy</span></h4><p class="problem"><b>Aujourd'hui -</b> « We Want To Stay In Touch! » : un peu mièvre pour une marque comme la vôtre.</p><p class="fix"><b>Mieux -</b> dites ce que les gens y gagnent vraiment (voir l'encadré au-dessus), et en français.</p></div></div>
+    <div class="point"><span class="n">c</span><div><h4>Avis clients mis en scène <span class="tagline t-good">confiance</span></h4><p>Vous avez déjà de bons avis (en français et en anglais) - ils méritent mieux que trois petites étoiles perdues sous les cartes. Une vraie section, avec une citation choisie, le prénom et le parfum porté.</p></div></div>
     <div class="point"><span class="n">d</span><div><h4>Bouton « Compare » & icônes flottantes <span class="tagline t-bad">esthétique</span></h4><p>Le « Compare » collé à droite et les badges qui flottent un peu partout : on enlève. Ça encombre l'écran et ça fait moins premium.</p></div></div>
     <div class="point"><span class="n">e</span><div><h4>Soin du mobile <span class="tagline t-prio">prioritaire</span></h4><p>La plupart de vos clientes sont sûrement sur téléphone : le mobile doit être aussi soigné que l'ordi. Des images qui chargent vite, un haut de page pas trop grand, et des boutons assez gros pour le pouce (au moins 44 px).</p></div></div>
   </div>
@@ -673,14 +704,14 @@ hr.soft{border:none; border-top:1px dashed var(--wireline); margin:34px 0;}
     </div>
   </div>
   <div class="points mt16">
-    <div class="point"><span class="n">→</span><div><h4>Garder la signature manuscrite</h4><p>C'est un vrai atout — gardez-la (en or sur fond noir, ce serait superbe). Juste, ne la noyez pas sous un paragraphe passe-partout.</p></div></div>
+    <div class="point"><span class="n">→</span><div><h4>Garder la signature manuscrite</h4><p>C'est un vrai atout - gardez-la (en or sur fond noir, ce serait superbe). Juste, ne la noyez pas sous un paragraphe passe-partout.</p></div></div>
     <div class="point"><span class="n">→</span><div><h4>Logos de paiement discrets</h4><p>On en a besoin pour rassurer, mais en version gris discret, tout en bas. Pas besoin qu'ils attirent l'œil.</p></div></div>
   </div>
 </section>
 
 <!-- ============ DOC FOOTER ============ -->
 <footer class="docfoot wrap">
-  Voilà pour mes notes — on peut creuser n'importe quel point ensemble quand vous voulez.<br>
+  Voilà pour mes notes - on peut creuser n'importe quel point ensemble quand vous voulez.<br>
   Petites maquettes faites main, à partir du site actuel et de votre rapport de marque · Mai 2026<br>
   Elles montrent l'idée et l'agencement, pas le rendu final.
 </footer>
